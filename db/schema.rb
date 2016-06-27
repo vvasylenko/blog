@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622183906) do
+ActiveRecord::Schema.define(version: 20160627173554) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -21,11 +21,25 @@ ActiveRecord::Schema.define(version: 20160622183906) do
     t.integer  "user_id"
   end
 
+  create_table "posts_tags", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+  end
+
+  add_index "posts_tags", ["post_id"], name: "index_posts_tags_on_post_id"
+  add_index "posts_tags", ["tag_id"], name: "index_posts_tags_on_tag_id"
+
 # Could not dump table "sqlite_stat1" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
 
 # Could not dump table "sqlite_stat4" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"

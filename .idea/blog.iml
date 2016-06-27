@@ -75,6 +75,7 @@
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v2.5.3, RVM: ruby-2.3.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, RVM: ruby-2.3.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v3.0.0, RVM: ruby-2.3.0 [blog]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="validates_email_format_of (v1.6.3, RVM: ruby-2.3.0 [blog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v2.3.0, RVM: ruby-2.3.0 [blog]) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
