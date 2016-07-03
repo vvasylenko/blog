@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Create New Tag', new_tag_path %>
+
+<table>
+  <tbody>
+  <% @tags.each do |tag| %>
+      <tr>
+        <td><strong>Name</strong></td>
+        <td><%= tag.name %></td>
+      </tr>
+      <tr>
+        <td>
+          <%= link_to 'Show', tag %>
+          <%= link_to 'Edit', edit_tag_path(tag) %>
+          <%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

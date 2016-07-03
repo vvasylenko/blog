@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  resources :tags
+  resources :users
   resources :posts
+  get "home" => "home#first"
+  root :to => "home#first"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

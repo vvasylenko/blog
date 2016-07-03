@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+.app-logo, a{
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color:#00A0C6;
+    text-decoration:none;
+    cursor:pointer;
+    background: none;
+}
+
+.menu{
+    list-style-type: none;
+}
+
+li{
+    display: inline;
+    background-color: deepskyblue;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a {
+    background-color: yellow;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+    background-color: orange;
+}
