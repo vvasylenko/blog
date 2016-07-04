@@ -5,9 +5,8 @@ class User < ActiveRecord::Base
 
   scope :has_email, -> { where.not(email: nil) }
 
-  public
+  def name
+    print "#{first_name} #{last_name}"
+  end
 
-    def name
-      print first_name , " ", last_name
-    end
 end

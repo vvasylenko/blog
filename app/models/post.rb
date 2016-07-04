@@ -7,21 +7,18 @@ class Post < ActiveRecord::Base
 
   scope :created_today, -> { where("created_at = ?", Date.today) }
 
-  private
+  def tags_count
+    Post.find_by(id).tags.count
+  end
 
+  def get_twenty_symbols
+    text.truncate(20)
+  end
+
+  private
     def bind_post_with_tag
       tag = Tag.find_by name: "Post"
       self.tag_ids = tag.id
     end
-
-  public
-    def tags_count
-      Post.find_by(id).tags.count
-    end
-
-    def get_twenty_symbols
-      text.truncate(20)
-    end
-
 
 end

@@ -1,17 +1,15 @@
-<% cache do %>
-    <header class="app-header">
-      <div class="app-cont">
-        <h1 class="app-logo">
-          <%= link_to "Blog about my life", root_path %>
-        </h1>
-      </div>
-    </header>
-    <body>
-      <ul class="menu">
-        <li class="active"><a href="<%= root_path %>">Home</a></li>
-        <li><%= link_to 'Users' , users_path %></li>
-        <li><%= link_to 'Posts' , posts_path %></li>
-        <li><%= link_to 'Tags' , tags_path %></li>
-      </ul>
-    </body>
-<% end %>
+<header class="app-header">
+  <div class="app-cont">
+    <h1 class="app-logo">
+      <%= link_to "Blog about my life", root_path %>
+    </h1>
+  </div>
+</header>
+<body>
+  <ul class="menu">
+    <li class="active"><a href="<%= root_path %>">Home</a></li>
+    <li><%= link_to 'Users' , users_path %></li>
+    <li><%= link_to 'Posts' , posts_path %></li>
+    <li><%= link_to 'Tags' , tags_path %></li>
+  </ul>
+</body>
